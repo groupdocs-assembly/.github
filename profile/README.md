@@ -6,12 +6,6 @@
   <strong>GroupDocs.Assembly</strong> is a on-premise solution for document automation and reporting API that generates documents from templates and data sources (JSON, XML, CSV, OData, databases, .NET/Java objects, REST, and more). Automate quotes, contracts, invoices, and reports across popular Office, PDF, HTML, and image formats with LINQ-based templates, barcodes, charts, conditional logic, and mail-merge style fields.
 </p>
 
-# GroupDocs.
-
-<p align="center">
-  GroupDocs.Assembly 
-</p>
-
 [![Product Page](https://img.shields.io/badge/Product%20Page-2865E0?style=for-the-badge&logo=appveyor&logoColor=white)](https://products.groupdocs.com/assembly/)
 [![Docs](https://img.shields.io/badge/Docs-2865E0?style=for-the-badge&logo=Hugo&logoColor=white)](https://docs.groupdocs.com/assembly/)
 [![Demos](https://img.shields.io/badge/Demos-2865E0?style=for-the-badge&logo=appveyor&logoColor=white)](https://products.groupdocs.app/assembly/family)
