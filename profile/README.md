@@ -16,15 +16,29 @@
 [![Temp License](https://img.shields.io/badge/Temp%20License-2865E0?style=for-the-badge&logo=rocket&logoColor=white)](https://purchase.groupdocs.com/temporary-license)
 
 ## Latest Assembly News & Updates
-* **NEW:** GroupDocs.Assembly for Python via .NET 26.11: engine 26.7 with the .NET 10 runtime embedded, the first wheels for Linux and macOS (Intel and Apple Silicon), Python 3.5 - 3.14, and Python dicts and lists as data sources. Install it with `pip install groupdocs-assembly-net` from [PyPI](https://pypi.org/project/groupdocs-assembly-net/26.11.0/). [Release notes](https://releases.groupdocs.com/assembly/python-net/release-notes/2026/groupdocs-assembly-for-python-via-net-26-11-release-notes/).
-* Published [GroupDocs.Assembly 26.7](https://www.nuget.org/packages/GroupDocs.Assembly/) for .NET on NuGet: refreshed document engines, template expressions that use members inherited from a base interface, and a package per target framework (.NET 6, 8 and 10 since 26.6). [Release notes](https://releases.groupdocs.com/assembly/net/release-notes/).
-* GroupDocs.Assembly for Java 26.10.1: plain Java objects as data sources on JDK 16 and later without JVM flags, data models typed by an interface, indexer syntax `obj["key"]` on Java objects, and JavaBean getters and `Map` keys read with member syntax. [Release notes](https://releases.groupdocs.com/assembly/java/release-notes/).
+* **NEW:** [GroupDocs.Assembly 26.11](https://www.nuget.org/packages/GroupDocs.Assembly/26.11.0) for .NET on NuGet. [Release notes](https://releases.groupdocs.com/assembly/net/release-notes/2026/groupdocs-assembly-for-net-26-11-release-notes/).
+  * **JSON Schema for JSON data:** `JsonDataSource` takes a JSON Schema, so a template can reference members that are `null`, empty or missing in the data, while misspelled names still fail.
+  * **Document preview:** `DocumentAssembler.GeneratePreview` renders pages of a template or a report to PNG, JPEG or BMP, with `PreviewOptions` for pages, size and resolution.
+  * Also: external resources referenced from data (for example image URLs) are no longer loaded by default, so allow their hosts with `LoadSaveOptions.WhitelistedResources`; a .NET Framework 4.8 build; `RemoveEmptyParagraphs` for spreadsheet and plain text templates; document engines 26.10.
+* **NEW:** Seven .NET sample repositories on GroupDocs.Assembly 26.11: Word, Excel and PowerPoint reports from JSON, ASP.NET Core report download, Docker, null-safe templates and documents from LLM output. Links in the .NET section below.
+* GroupDocs.Assembly for Python via .NET 26.11: engine 26.7 with the .NET 10 runtime embedded, the first wheels for Linux and macOS (Intel and Apple Silicon), Python 3.5 - 3.14, and Python dicts and lists as data sources. Install it with `pip install groupdocs-assembly-net` from [PyPI](https://pypi.org/project/groupdocs-assembly-net/26.11.0/). [Release notes](https://releases.groupdocs.com/assembly/python-net/release-notes/2026/groupdocs-assembly-for-python-via-net-26-11-release-notes/).
+* GroupDocs.Assembly for Java 26.11: the same JSON Schema support, document preview and control of external resources as .NET 26.11, plus engines 26.10. [Release notes](https://releases.groupdocs.com/assembly/java/release-notes/2026/groupdocs-assembly-for-java-26-11-release-notes/).
 
 ## Supported Platforms & Repository Groups
 
 ### .NET Document Automation (C#, ASP.NET, Services)
-Generate documents and reports from templates on .NET Framework 4.0+, .NET Standard 2.0 and .NET 6, 8 and 10.
+Generate documents and reports from templates on .NET Framework 4.0+ (with 4.6.2 and 4.8 builds), .NET Standard 2.0 and .NET 6, 8 and 10.
 * **[GroupDocs.Assembly-for-.NET](https://github.com/groupdocs-assembly/GroupDocs.Assembly-for-.NET)**: Examples for every data source, template feature and output format.
+* **[GroupDocs.Assembly.Mcp](https://github.com/groupdocs-assembly/GroupDocs.Assembly.Mcp)**: MCP server that lets Claude, Cursor, GitHub Copilot and other AI agents fill Word, Excel, PowerPoint, PDF and email templates with JSON, XML or CSV data locally: `dnx GroupDocs.Assembly.Mcp --yes`, or the `groupdocs/assembly-net-mcp` Docker image.
+
+Sample projects, one scenario each, on .NET 8:
+* **[word-report-from-template-net](https://github.com/groupdocs-assembly/word-report-from-template-net)**: fill a DOCX template from a .NET object or JSON and save it as DOCX or PDF, with no Microsoft Office on the server.
+* **[excel-reports-from-template-net](https://github.com/groupdocs-assembly/excel-reports-from-template-net)**: Excel reports with repeating rows from JSON; `UseSpreadsheetDataTypes` keeps the numbers numbers.
+* **[powerpoint-decks-from-json-net](https://github.com/groupdocs-assembly/powerpoint-decks-from-json-net)**: PowerPoint decks from JSON, with a table that grows with the data and a picture in every row.
+* **[aspnet-core-report-download-net](https://github.com/groupdocs-assembly/aspnet-core-report-download-net)**: ASP.NET Core minimal API that returns a Word or PDF report and a PNG preview of its first page.
+* **[document-generation-docker-net](https://github.com/groupdocs-assembly/document-generation-docker-net)**: document generation in a Linux container, with the fonts it needs.
+* **[data-safe-templates-net](https://github.com/groupdocs-assembly/data-safe-templates-net)**: missing and null data in templates: JSON Schema, `AllowMissingMembers` and `InlineErrorMessages`.
+* **[llm-json-to-branded-documents-net](https://github.com/groupdocs-assembly/llm-json-to-branded-documents-net)**: Word and PDF documents from LLM output, with a JSON Schema as the contract between the model and the template.
 
 ```csharp
 using GroupDocs.Assembly;
